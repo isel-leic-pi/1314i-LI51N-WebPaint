@@ -1,0 +1,15 @@
+
+<div class="btn-group navbar-right">
+  <% if(user) { %>
+  <a class="btn navbar-btn navbar-right" href="/signout" > sign out </a>
+  <p class="navbar-text navbar-right">
+    <img src="<%= gravatar.url(user.email, {s: 28, r: 'g', default: 'retro'}) %>" style="width: 28px; position: absolute; left: -17px; top: 12px; border: solid 1px lightgray;" />
+    <span href="#" class="navbar-link"><%= user.email %></span>
+  </p>
+  <% } else { %>
+   <a class="btn navbar-btn btn-success" href="/signin" >Sign In</a>
+   <a class="btn navbar-btn btn-default" href="/register" >Register</a>
+  <% } %>
+</div>
+
+

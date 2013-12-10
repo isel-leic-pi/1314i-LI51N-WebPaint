@@ -1,0 +1,78 @@
+<% include ../layout/top %>
+
+<h1>EDIT Drawing</h1>
+
+<form role="form" method="POST" action="/drawings/<%=paint.id%>/edit" >
+  <div class="row">
+
+    <div class="col-md-9">
+      <div class="form-group">
+        <label>Image</label>
+        <canvas tabindex="1" style="display:block; outline:none" id="canvas-img" width="800px" height="600px" ></canvas>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <h3>Title</h3>
+        <input type="text" class="form-control" value="<%= paint.title %>" name="title" />
+      </div>
+
+      <p class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Save Title" /> 
+        <a class="btn btn-default pull-right" href="/drawings/<%= paint.id %>" >Cancel</a>
+      </p>
+
+      <hr class="clearfix" />
+
+      <h3>Instructions</h3>
+      <br/>
+      <ul>
+          <li><i>Drag the mouse</i> to <strong>draw</strong> coloured squares</li>
+          <li><i>right click mouse</i> to <strong>clear</strong> the drawing</li>
+          <li>press <i>key <kbd>r</kbd></i> to <strong>restore a sample picture</strong> of the drawing</li>
+          <li>press <i>key <kbd>s</kbd></i> to <strong>save</strong> the drawing</li>
+      </ul>
+
+
+      <hr />
+      <h3>Editors (TODO)</h3>
+      <div id="editors">
+        <div class="media" >
+          <a class="pull-left" href="#">
+            <img class="media-object" src="http://www.gravatar.com/avatar/2ce7680791d4e213df0086a3ec3a3a0c?s=28&r=g&default=retro" style="width:28px; height:28px;">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">cguedes@gmail.com</h4>
+          </div>
+        </div>
+        <div class="media" >
+          <a class="pull-left" href="#">
+            <img class="media-object" src="http://www.gravatar.com/avatar/19bb17ec4ecc9227d59b635957084f1d?s=28&r=g&default=retro" style="width:28px; height:28px;">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">bart@gmail.com</h4>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+</form>
+
+<script src="/scripts/drawings/drawings.js"></script>
+<script type="text/javascript">
+  Drawings.buildEditorFor("canvas-img", <%= paint.id %>, "<%= paint.content %>");
+</script>
+
+
+<% include ../layout/bottom %>
+
+
+
+
+
+
+
+

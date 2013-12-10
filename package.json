@@ -1,0 +1,31 @@
+{
+  "name": "WebPaintexpress",
+  "version": "1.0.1",
+  "description": "A sample drawing web application in NodeJS, with express",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "linq": "~1.0.2",
+    "express": "~3.4.4",
+    "ejs": "~0.8.5",
+    "connect": "~2.11.0",
+    "gravatar": "~1.0.6"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0"
+  },
+  "scripts": {
+    "test": "mocha -w -b -R spec tests/* "
+  },
+  "keywords": [
+    "paint",
+    "web",
+    "pi",
+    "isel",
+    "leic"
+  ],
+  "author": "Carlos Guedes et all",
+  "license": "MIT"
+}

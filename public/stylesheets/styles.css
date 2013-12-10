@@ -1,0 +1,38 @@
+.drawings .thumbnail:hover {
+  cbackground-color: #EFEFEF;
+}
+
+.drawings .thumbnail .actions {
+  visibility: hidden;
+}
+
+.drawings .thumbnail:hover .actions {
+  visibility: visible;
+}
+
+.drawings .drawing {
+  position: relative;
+}
+
+.drawings .drawing:hover .thumbnail {
+  border: solid 1px #CCCC88;
+}
+
+
+.drawings .drawing .actions {
+  position:absolute; 
+  bottom:20px; 
+  opacity:0; 
+  height: 4em; 
+  padding:.5em; 
+  background-color: #CCCC88; 
+  display:block; 
+  width:90%;
+
+  color: black;
+  font-weight: bold;
+}
+
+.drawings .drawing:hover .actions {
+  opacity: .7;
++}

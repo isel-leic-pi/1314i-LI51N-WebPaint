@@ -1,0 +1,29 @@
+<% include ../layout/top %>
+
+<section class="drawings"> 
+
+  <h1>Drawings</h1>
+  <div class="row">
+  <% paints.forEach(function(paint) { %>
+  
+    <div class="col-xs-6 col-md-3 drawing" >
+      <a href="/drawings/<%= paint.id %>" class="thumbnail">
+            <img src='<%= paint.content %>' />
+      </a>
+      <div class="actions" >
+        <%= paint.title %><br>
+        <div class="pull-right btn-group" role="toolbar">
+          <a href="/drawings/<%= paint.id %>" class="btn btn-xs btn-default" role="button">Show</a> 
+          <a href="/drawings/<%= paint.id %>/edit" class="btn btn-xs btn-primary" role="button">Edit</a> 
+          <a href="/drawings/<%= paint.id %>/remove" class="btn btn-xs btn-danger" role="button">Remove</a>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+
+  </div>
+
+</section>
+
+
+<% include ../layout/bottom %>
